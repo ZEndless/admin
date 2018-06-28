@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Bootstrap 实例</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
-  <script th:src="@{/js/jquery/jquery-3.3.1.min.js}"></script>
-  <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
-  <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<title>Bootstrap 实例</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" th:href="@{css/login/styles.css}">
 </head>
 <body>
+	<div class="htmleaf-container">
+		<div class="wrapper">
+			<div class="container">
+				<h1>Welcome</h1>
 
-<div class="container-fluid">
-  <h1>Hello World!</h1>
-  <p>创建三个相等宽度的列! 尝试在 class="row" 的 div 中添加新的 class="col"  div，会显示四个等宽的列。</p>
-  <div class="row">
-    <div class="col" style="background-color:lavender;">.col</div>
-    <div class="col" style="background-color:orange;">.col</div>
-    <div class="col" style="background-color:lavender;">.col</div>
-  </div>
-</div>
+				<form class="form">
+					<input type="text" placeholder="Username"> <input
+						type="password" placeholder="Password">
+					<button type="submit" id="login-button">Login</button>
+				</form>
+			</div>
 
+			<ul class="bg-bubbles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
 
+	<script th:src="@{/js/jquery/jquery-3.3.1.min.js}" type="text/javascript"></script>
+	<script>
+		$('#login-button').click(function(event) {
+			event.preventDefault();
+			$('form').fadeOut(500);
+			$('.wrapper').addClass('form-success');
+		});
+	</script>
+
+	<div
+		style="text-align: center; margin: 50px 0; font: normal 14px/24px 'MicroSoft YaHei'; color: #000000">
+		<h1>XX系统</h1>
+	</div>
 </body>
 </html>
